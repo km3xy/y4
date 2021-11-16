@@ -1,0 +1,120 @@
+Termux系列教程  手机编程
+
+Python3安装以及lxml跳坑指南！
+
+
+前面讲解了 Termux 的下载方式以及基础设置，大家对于这款神器APP了解的不少，接下来就是喜闻乐见的开发环境安装环节，php、Python、Java……等等。
+
+有了这些开发环境，Termux才能称得上是神器。
+
+
+Python
+
+Python 是非常适合新手的一款编程语言，入门简单，代码简洁，来看看怎么安装 Python。
+
+安装 Python3
+
+前面写过，Termux 的安装命令是pkg，打开 APP，直接输入如下命令：
+
+pkg install python
+
+稍等片刻会提示：需要下载49M的包，以及292M的手机存储，是否继续？
+
+直接输入： Y，回车确认即可。
+
+再等一会，Python 就安装成功了。
+
+
+根据反馈，安装的 Python 版本为 3.8.5。
+
+终端输入 Python 试一试是不是真的成功安装了？
+
+
+进入了 Python 交互模式，看到一切正常。
+
+OK，是不是很简单！
+
+
+运行 Python
+
+运行一个 Python 脚本，有两种方法。
+
+第一种，直接在 Python 交互模式中编写，但交互更多用于测试，对于大一点的脚本来说太不友好了。
+
+第二种，在编辑器中编写 .py 后缀的 Python 脚本，然后在终端输入命令：
+
+python xxx.py
+
+其实还有一种方法，可以用 Jupyter，这是一个很强大 web端 可视化工具，比起单纯的 python 交互模式强大了不止百倍，可以安装许多插件，代码补全等等。
+
+关于 Jupyter，不在今天的讨论范围内，后面再写。
+
+
+PIP库安装
+
+Python 最强大的地方就是五花八门的插件库，numpy、requests、lxml……，正是这些现成库的存在，Python才成为最热门也最容易开发的语言。
+
+pip 是 Python 官方的包管理工具，用来对 Python 包的安装、卸载、查找，下表介绍了 pip 常用命令：
+
+pip命令	翻译
+pip install xxx	安装包
+pip uninstall xxx	卸载包
+pip search xxx	查找包
+pip show xxx	显示包
+安装，不用多说了，就是安装包。
+
+卸载同上。
+
+查找包，顾名思义，可以查找包。
+
+最后一个显示包，则是用来显示包的一些基本信息，例如安装位置或者依赖等等。
+
+话不多说，安装试试。
+
+lxml包安装
+
+lxml，爬虫必备包，用来解析 HTML 或 XML 文档，速度极快，但安装总是出错，百度一搜，都是求助贴。
+
+太难了！😭
+
+别急，我来帮你！
+
+
+只需要输入三个命令就行了。
+
+代码如下：
+
+pkg in libxml2 libxslt -y
+pip install cython
+pip install lxml
+
+这是来自基安@Ecodemo的方法，首先安装 libxml2 libxslt，然后再安装 cpython，最后直接安装 lxml
+
+
+亲测成功安装了！
+
+测试看看是不是真的成功了，别看着安装了却不能用。
+
+先进 Python 交互模式，然后输入：
+
+from lxml import etree
+
+如下所示
+
+
+没有错误，一切正常，说明我们安装成功了。
+
+PS：忘记说了，退出Python交互模式的命令是 CTRL+z
+
+
+后记
+
+关于 Python 的安装以及 pip包 的使用方法大致就是这些，今天就到这里，更多使用方法以及技巧教程后面继续更新，记得关注我！
+
+另外，新手强烈建议使用 Pydroid 这款 IDE，优势很大，代码补全，pip安装省心，具体请看文章：「 吊打QPython的集成开发环境，无广告，无BUG，已完美解锁 」
+
+Termux 系列教程：
+
+微信公众号：
+
+手机编程
