@@ -7,4 +7,15 @@ Python3安装以及lxml跳坑指南！
 
 
 
+高手教程
+
+
+http://study.p2hp.com/redis/redis-tutorial.html
+
+
+
+
+
+
+
 
